@@ -25,7 +25,7 @@ FirebaseData firebaseData;
 String path = "/";
 FirebaseJson json; 
 
-int sent(int a)
+byte sent(byte a)
 {
   if(a==1)
   a=0;
@@ -107,9 +107,11 @@ void loop() {
     digitalWrite(BUZZ, HIGH);}
   
   if (valuegas > 700|| z==1)
-    digitalWrite(BUZZ, HIGH);
+    {digitalWrite(SOS, LOW);
+    digitalWrite(BUZZ, LOW);}
   else
-    digitalWrite(BUZZ, LOW);
+    {digitalWrite(SOS, HIGH);
+    digitalWrite(BUZZ, HIGH);}
 
   t1 = millis();
   }
