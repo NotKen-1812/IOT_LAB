@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parking Display</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="main-text">
+            <img src="image/LOGO.png" align="left"; id="logo_img" >
+            <h1>Smart Parking System</h1>
+            <p>Team: <span class="lot-id">IOT</span></p>
+        </div>
+        <main>
+            <div class="data-box">
+                <p class="m-para">Parking Status</p>
+                <p class="name1-para"><span style="font-family: Arial">Trần Nguyễn Anh Khoa</span></p><span id="nam1-data">20119188</span>
+                <p class="name2-para"><span style="font-family: Arial">Lê Văn Sỹ </span></p><span class="nam2-data">20119156</span>
+                
+                <div class="location">
+                  <p>Parking's Location:</p><i class="fas fa-map-marker-alt"></i><p>Ho Chi Minh City, VN</p>
+                </div>
+            </div>
+
+            <div class="display-box">
+                <div class="top">
+                    <div class="sensors">
+                      <div id="parking_slot">
+                        <img src="image/slot_available.png"; id="parking_img">
+                        <h1>Slot</h1>
+                      </div>
+                    </div>
+                    <div class="sensors">
+                      <div id="gas">
+                        <img src="image/gas.png"; id="gas_img">
+                        <h1>Gas</h1>
+                      </div>
+                    </div>
+                </div>
+                <div class="between">
+                  <div class="sensors">
+                    <div id="parking_slot">
+                      <h2 id="data_slot">Data Slot</h2>
+                    </div>
+                  </div>
+                  <div class="sensors">
+                    <div id="gas">
+                      <h2 id="data_gas">Data Gas</h2>
+                    </div>
+                  </div>
+              </div>
+                <div class="bot">
+                    <div class="control_button">
+                      <img src="image\barrier_off.png"id="barrier" width="200px" height="200px"><br>
+                      <h1>Barrier</h1><br>
+                      <button type="button" id="barrier_on_button">On</button>
+                      <button type="button" id="barrier_off_button">Off</button>
+                    </div>
+                    <div class="control_button">  
+                      <img src="image\light_off.png"id="led" width="200px" height="200px"><br>
+                      <h1>Light</h1><br>
+                      <button type="button" id="led_on_button">On</button>
+                      <button type="button" id="led_off_button">Off</button>
+                    </div>
+                    <div class="control_button">
+                      <img src="image\sos_off.png"id="sos" width="200px" height="200px"><br>
+                      <h1>Alarm</h1><br>
+                      <button type="button" id="sos_on_button">On</button>
+                      <button type="button" id="sos_off_button">Off</button>
+                    </div>
+                </div>
+            </div>            
+        </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
