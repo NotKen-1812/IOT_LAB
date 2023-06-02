@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 #include "FirebaseESP8266.h"
 #include <ArduinoJson.h>
-#define WIFI_SSID "Chau_Tran"//"ANH THU"
-#define WIFI_PASSWORD "Minhchau123321"//"0123456789"
+#define WIFI_SSID "ANH THU"
+#define WIFI_PASSWORD "0123456789"
 
 #define FIREBASE_HOST "iotkt-a9c2e-default-rtdb.firebaseio.com/"
 #define FIREBASE_AUTH "iRi30VlobOXxhKnx5J4Q4u9QGcgodZFGOT1l23v1"
@@ -29,7 +29,7 @@ byte sent(byte a)
 {
   if(a==1)
   a=0;
-  if(a==0)
+  else
   a=1;
   return a;
 }
@@ -107,11 +107,11 @@ void loop() {
     digitalWrite(BUZZ, HIGH);}
   
   if (valuegas > 700|| z==1)
-    {digitalWrite(SOS, LOW);
-    digitalWrite(BUZZ, LOW);}
-  else
     {digitalWrite(SOS, HIGH);
     digitalWrite(BUZZ, HIGH);}
+  else
+    {digitalWrite(SOS, LOW);
+    digitalWrite(BUZZ, LOW);}
 
   t1 = millis();
   }
